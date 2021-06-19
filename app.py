@@ -18,11 +18,11 @@ def main():
  </div>
  """
  st.markdown(html_temp,unsafe_allow_html=True)
- Average_Temperature= st.text_input("Average_Temperature ","Type Here")
- Maximum_Temperature = st.text_input("Maximum_Temperature ","Type Here")
- Minimum_Temperature = st.text_input("Minimum_Temperature ","Type Here")
- Atm_pressure_at_sea_level = st.text_input("Atm_pressure_at_sea_level ","Type Here")
- Average_wind_speed = st.text_input("Average_wind_speed","Type Here")
+ Average_Temperature= st.text_input("Average_Temperature ",0)
+ Maximum_Temperature = st.text_input("Maximum_Temperature ",0)
+ Minimum_Temperature = st.text_input("Minimum_Temperature ",0)
+ Atm_pressure_at_sea_level = st.text_input("Atm_pressure_at_sea_level ",0)
+ Average_wind_speed = st.text_input("Average_wind_speed",0)
  result=""
  if st.button("Predict"):
  	result=predict_AQI(Average_Temperature,Maximum_Temperature,Minimum_Temperature,Atm_pressure_at_sea_level,Average_wind_speed)
